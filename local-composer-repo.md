@@ -80,6 +80,7 @@ Take a look at mine:
 Fields `name` and `homepage` are required. The other ones:
 
 - `repositories` a list of the repositories that you'll use to get packages
+- `require` a list of required packages, directly copied from the global `composer.json`
 - `require-all` download all packages, not only tagged ones. In my case I don't want everything from 
 the repo so it stays `false`
 - `require-dependencies` when `true`, Satis automatically resolves and adds all dependencies, so Composer won’t need to use Packagist.
@@ -87,3 +88,49 @@ the repo so it stays `false`
 of packages, so is good for offline use
 - `archive` `zip` files will be stored in the `dist` directory and we won’t download `dev` packages
 
+## Building (downloading) the repo
+
+Then, we tell Satis to build the repository:
+
+    $ ./bin/satis build satis.json new-repo-folder/
+       
+I would recommend raising php default memory limit of 128 mb to much bigger than that to avoid running
+into out of memory issues. Is easy to do from the shell:
+
+    $ php -dmemory_limit=1G ./bin/satis build satis.json new-repo-folder/ 
+    
+This is going to take a while, specially if you have a *sh\*\*ty* connection like mine. 
+So go grab a coffee ;)
+    
+After this, we have a new directory called `new-repo-folder`, which contains two files: 
+`packages.json` and `index.html`. The former is the repository configuration file, 
+the one that will be read by Composer to determine what packages the repository offers. 
+The `index.html` file is just a static html file with information about the repository. 
+It also contains the `dist` directory with all packages 
+so they won’t have to be downloaded from GitHub anymore.
+
+And finally, we publish our repository using the PHP built-in server
+(for real repositories it is recommended to use Apache or nginx):
+
+    $ php -S localhost:8001 -t new-repo-folder/
+
+Now, if we go to `http://localhost:8001/`, we should see a webpage that states that our server is there,
+updated and with certain packages and versions.
+
+At the top of the page should be the `repositories` entry that you'll need to add to your Composer global
+config.
+
+## Using the repo in Composer
+
+Once we have the repository up and running, the last step is to tell Composer that we want to use it. 
+This can be done by adding the following lines to the `composer.json` file of your project or in 
+`~/.config/composer/config.json` for a global use of this.
+
+    {
+        "repositories" : [
+            {"type" : "composer", "url" : "http://localhost:8001/"}
+        ],
+        ...
+    }
+    
+Then, when executing composer install, our custom repository should be used.
