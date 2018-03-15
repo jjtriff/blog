@@ -30,16 +30,17 @@ This says that we need package `laravel/laravel`. If we install that package glo
 a `composer.json` file inside our global Composer config dir (mine is `~/.config/composer`) that
 expresses neatly the packages we require:
 
-        {
-            "require": {
-                "laravel/installer": "^2.0",
-                "laravel/laravel": "^5.6",
-                "fabpot/goutte": "^3.2",
-                "guzzlehttp/guzzle": "^6.3",
-                "laravel/valet": "^2.0"
-            }
-        }
-
+```json
+{
+    "require": {
+        "laravel/installer": "^2.0",
+        "laravel/laravel": "^5.6",
+        "fabpot/goutte": "^3.2",
+        "guzzlehttp/guzzle": "^6.3",
+        "laravel/valet": "^2.0"
+    }
+}
+```
 
 ## Repository configuration file
 
@@ -49,31 +50,33 @@ command.
 
 Take a look at mine:
 
-        {
-            "name": "jtriff repository",
-            "homepage" : "http://localhost:8001",
-            "repositories": [
-                        {
-                    "type": "composer",
-                    "url": "https://packagist.jp"
-                }
-            ],
-            "require": {
-                "laravel/installer": "^2.0",
-                "laravel/laravel": "^5.6",
-                "fabpot/goutte": "^3.2",
-                "guzzlehttp/guzzle": "^6.3",
-                "laravel/valet": "^2.0"
-            },
-            "require-all": false,
-            "require-dependencies": true,
-            "require-dev-dependencies" : true,
-            "archive": {
-                "directory": "dist",
-                "format": "zip",
-                "skip-dev": true
-            }
+```json
+{
+    "name": "jtriff repository",
+    "homepage" : "http://localhost:8001",
+    "repositories": [
+                {
+            "type": "composer",
+            "url": "https://packagist.jp"
         }
+    ],
+    "require": {
+        "laravel/installer": "^2.0",
+        "laravel/laravel": "^5.6",
+        "fabpot/goutte": "^3.2",
+        "guzzlehttp/guzzle": "^6.3",
+        "laravel/valet": "^2.0"
+    },
+    "require-all": false,
+    "require-dependencies": true,
+    "require-dev-dependencies" : true,
+    "archive": {
+        "directory": "dist",
+        "format": "zip",
+        "skip-dev": true
+    }
+}
+```
         
 ### Explanation
 
