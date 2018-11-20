@@ -232,4 +232,8 @@ Lets see:
 
 Okis, everything is good again, **Thanks be to God!** Now back to work :)
 
+## Late note
 
+This config also works for sending mails to other domains like Gmail, you can try it, just be sure to look in spam folder too.
+
+Finally: postfix is a broad world and this is just a pinch, don't take this guide as a definitive reference, but their official doc <http://www.postfix.com>.
