@@ -202,33 +202,28 @@ Conclusion by now: **it works!!!! Yeeeyyyy!!!**
 Ok. We are here: is working. But we want to enjoy a fully HTML experience of our new inbox. Gladly I use the [KDE](https://www.kde.org) ecosystem *(Awwwww! so cooooooool!!)*. In here is the KMail email client. KMail supports local mailbox through akonadi:
 
 ![KMail Mbox](/blog/images/kmail.png)
-![KMail Mbox](./images/kmail.png)
 
 In there you should point to the local `mbox` file:
 
-![KMail Mbox](/blog/images/mbox-file.png)
-![KMail Mbox](./images/mbox-file.png)
+![Pointing to the local MBox](/blog/images/mbox-file.png)
 
 ### Sending
 
 The other super cool (and serious) thing of KMail: supports `sendmail`:
 
-![KMail Mbox](/blog/images/sendmail.png)
-![KMail Mbox](./images/sendmail.png)
+![Configuring sendmail](/blog/images/sendmail.png)
 
 ### Testing KMail with HTML
 
 Ok, to be 100% sure lets do a new test but this time with HTML content. Lets use the first two sections of this very post
 
-![KMail Mbox](/blog/images/html-mail.png)
-![KMail Mbox](./images/html-mail.png)
+![Creating HTML mail](/blog/images/html-mail.png)
 
 Sent it!
 
 Lets see:
 
-![KMail Mbox](/blog/images/kmail-list.png)
-![KMail Mbox](./images/kmail-list.png)
+![Checking new HTML item in the message list](/blog/images/kmail-list.png)
 
 Okis, everything is good again, **Thanks be to God!** Now back to work :)
 
