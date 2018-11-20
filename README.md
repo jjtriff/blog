@@ -6,4 +6,4 @@ Just a personal site for writing down thoughts and avoid forgetting them
 1. [Adding Arch linux repos to Kaos Linux](/blog/adding-arch-repos-to-kaos)
 1. [Fun with MariaDB](/blog/fun-with-mariadb)
 1. [Fun with Dolphin and SSH](/blog/fun-with-dolphin-and-ssh)
-1. [Postfix and the config nightmare](/blog/installing-postfix.md)
+1. [Postfix and the config nightmare](/blog/installing-postfix)
