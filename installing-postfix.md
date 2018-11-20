@@ -51,7 +51,7 @@ Little by little, a whole morning on this arrived to this steps.
 
     The 2 lastones: `postdrop` and `postfix`. But `postdrop` is the one.
 
-1. Start with the simplest way of debuggin postfix has:
+1. Start with the simplest way of debuggin that postfix has:
     ```
     # postfix check 
     postsuper: fatal: scan_dir_push: open directory bounce: Permission denied
