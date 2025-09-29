@@ -36,4 +36,4 @@ jobs:
         run: ./deploy.sh
 ```
 
-This step outputs the precise command you need to run on your terminal to allow it to continue, keeping things simple and effective. By adding this to your workflow, you can simulate manual gates—like approvals—locally, making your `act` tests more realistic. It’s a small tweak, but it gives you better control over your workflow’s flow when testing with `act`.
+This step outputs the precise command you need to run on your terminal (it will be a `docker` command) to allow it to continue, keeping things simple and effective. By adding this to your workflow, you can simulate manual gates—like approvals—locally, making your `act` tests more realistic. It’s a small tweak, but it gives you better control over your workflow’s flow when testing with `act`.
